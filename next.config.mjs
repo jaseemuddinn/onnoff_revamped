@@ -2,3 +2,6 @@
 const nextConfig = {};
 
 export default nextConfig;
+nextConfig.images = {
+    domains: ['picsum.photos'],
+};

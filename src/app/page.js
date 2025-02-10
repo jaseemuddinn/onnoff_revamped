@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Process from "@/components/Process/process";
 import Hero from "@/components/Hero/hero";
-import World from "@/components/world/World";
+import Services from "@/components/services/Services";
+import { World } from "@/components/world/World";
 
 export default function Page() {
   const [loading, setLoading] = useState(true);
@@ -49,7 +50,7 @@ export default function Page() {
                   className="h-full bg-white"
                   style={{ width: `${progress}%` }}
                 >
-                  <motion.p className="text-center px-20 text-9xl font-bold text-gray-900">
+                  <motion.p className="text-center relative font-montserrat px-20 text-9xl font-bold text-gray-900">
                     {progress}
                   </motion.p>
                 </motion.div>
@@ -85,8 +86,9 @@ export default function Page() {
         className={loading ? "hidden" : "block"}
       >
         <Hero />
+        <Services />
         <Process />
-        <World />
+        {/* <World /> */}
       </div>
     </>
   );
