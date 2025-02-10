@@ -50,7 +50,7 @@ export default function Page() {
                   className="h-full bg-white"
                   style={{ width: `${progress}%` }}
                 >
-                  <motion.p className="text-center relative font-montserrat px-20 text-9xl font-bold text-gray-900">
+                  <motion.p className="text-center relative font-montserrat px-20 md:text-[228px]  text-9xl font-bold text-gray-900">
                     {progress}
                   </motion.p>
                 </motion.div>
