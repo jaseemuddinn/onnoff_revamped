@@ -6,7 +6,7 @@ function Services() {
     <section className="b-zinc-950 p-4 md:p-8">
       <div className="mx-auto max-w-7xl">
         <div className="relative">
-          <h2 className="text-3xl md:text-5xl xxl:text-7xl font-poppins">We are a creative agency that specializes in </h2>
+          <h2 className="text-3xl md:text-5xl xxl:text-7xl font-poppins">A creative agency that specializes in </h2>
         </div>
         <Link heading="Creative Direction" />
         <Link heading="Visual Design" />

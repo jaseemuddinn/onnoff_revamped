@@ -5,7 +5,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import Process from "@/components/Process/process";
 import Hero from "@/components/Hero/hero";
 import Services from "@/components/services/Services";
-import { World } from "@/components/world/World";
+import World from "@/components/world/World";
+import Hook from "@/components/Hook/Hook";
+import Globe from "@/components/world/World";
+import SearchableFAQ from "@/components/faq/faq";
+import FAQAccordion from "@/components/faq/faq";
 
 export default function Page() {
   const [loading, setLoading] = useState(true);
@@ -86,9 +90,13 @@ export default function Page() {
         className={loading ? "hidden" : "block"}
       >
         <Hero />
+        <Hook />
         <Services />
         <Process />
         {/* <World /> */}
+        {/* <Globe /> */}
+        {/* <SearchableFAQ /> */}
+        <FAQAccordion />
       </div>
     </>
   );

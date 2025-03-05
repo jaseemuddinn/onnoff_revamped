@@ -16,3 +16,7 @@ body {
     --radius: 0.5rem;
   }
 }
+
+.leaflet-container {
+  background: transparent;
+}

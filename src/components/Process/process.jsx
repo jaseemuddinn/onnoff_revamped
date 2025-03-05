@@ -84,7 +84,7 @@ export default function Process() {
         <div className="flex flex-col lg:flex-row px-4 lg:px-20">
           {/* Left Side: Static content */}
           <div className="lg:w-1/2 w-full sticky top-0 h-screen flex items-center justify-center">
-            <div className="max-w-[90%]">
+            <div className="max-w-full lg:max-w-[90%]">
               <h1 className="text-5xl md:text-8xl font-bold font-montserrat text-black">
                 Professional Foreplay
               </h1>
