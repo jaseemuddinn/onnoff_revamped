@@ -69,7 +69,7 @@ const faqs = [
 export default function FAQAccordion() {
     return (
         <div className="space-y-4 h-auto mb-20 max-w-7xl mx-auto relative px-4 lg:px-0">
-            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-black font-montserrat'>And Here Comes The Common Doubts?
+            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-black font-montserrat'>And Here Come The Common Doubts?
                 {/* <span className='text-sm font-normal'>(Related and Unrelated with onnoff at the same time)</span> */}
             </h1>
             <p></p>
