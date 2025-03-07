@@ -7,6 +7,7 @@ import Hero from "@/components/Hero/hero";
 import Services from "@/components/services/Services";
 import Hook from "@/components/Hook/Hook";
 import FAQAccordion from "@/components/faq/faq";
+import Contact from "@/components/contact/contact";
 
 export default function Page() {
   const [loading, setLoading] = useState(true);
@@ -86,6 +87,7 @@ export default function Page() {
         <Services />
         <Process />
         <FAQAccordion />
+        <Contact />
       </div>
     </>
   );
