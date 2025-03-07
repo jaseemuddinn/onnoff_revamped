@@ -69,6 +69,10 @@ export default function Contact() {
   const rotateX = useTransform(y, [0, 500], [15, -15])
   const rotateY = useTransform(x, [0, 500], [-15, 15])
 
+  const handleClick = () => {
+    window.location.href = 'mailto:hello@onnoff.in';
+  }
+
   // Resize text to fit container width
   useEffect(() => {
     const resizeText = () => {
@@ -115,7 +119,7 @@ export default function Contact() {
         style={{ rotateX, rotateY }}
       >
         {/* Full-width "Contact Us" text */}
-        <div className="inset-0 flex items-center justify-center">
+        <div onClick={handleClick} className="inset-0 flex items-center justify-center">
           <span
             ref={textRef}
             className="whitespace-nowrap text-center font-bold uppercase text-black font-montserrat "
