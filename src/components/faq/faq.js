@@ -8,7 +8,7 @@ const faqs = [
     },
     {
         question: "How do we handle requests at 3 AM?",
-        answer: "Honestly? We don't. Developers might not sleep at night, but we like to pretend work-life balance matters. So, we'll get back to you in the morning—fresh, caffeinated, and ready to crush it. But don't worry, we've got systems in place to ensure your business never sleeps (even if we do)."
+        answer: "Honestly? We don't. Developers might not sleep at night, but we like to pretend work-life balance matters. So, we'll get back to you in the morning - fresh, caffeinated, and ready to crush it. But don't worry, we've got systems in place to ensure your business never sleeps (even if we do)."
     },
     {
         question: "Do we offer any unusual services?",
