@@ -6,7 +6,8 @@ export const BoxReveal = ({
   children,
   width = "fit-content",
   boxColor = "#5046e6",
-  duration
+  duration,
+  reset
 }) => {
   const mainControls = useAnimation();
   const slideControls = useAnimation();
@@ -22,7 +23,8 @@ export const BoxReveal = ({
       slideControls.start("hidden");
       mainControls.start("hidden");
     }
-  }, [isInView, mainControls, slideControls]);
+  }, [isInView, mainControls, slideControls, reset]);
+  
 
   return (
     (<div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>

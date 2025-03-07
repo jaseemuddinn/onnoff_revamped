@@ -5,10 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Process from "@/components/Process/process";
 import Hero from "@/components/Hero/hero";
 import Services from "@/components/services/Services";
-import World from "@/components/world/World";
 import Hook from "@/components/Hook/Hook";
-import Globe from "@/components/world/World";
-import SearchableFAQ from "@/components/faq/faq";
 import FAQAccordion from "@/components/faq/faq";
 
 export default function Page() {
@@ -44,12 +41,8 @@ export default function Page() {
             <div className="w-96 h-96 rounded-full left-72 animate-blob opacity-60 blur-2xl fixed bg-red-400"></div>
             <div className="w-96 h-96 rounded-full right-72 animation-delay-1 animate-blob opacity-60 blur-2xl fixed bg-blue-400"></div>
             <div className="w-72 h-72 rounded-full opacity-60 animation-delay-2 blur-2xl bottom-40 fixed bg-orange-300 animate-blob"></div>
-            {/* Optionally, you could add your grainy SVG filter here as an overlay */}
             <div className="w-full">
-              {/* Progress Bar Container */}
               <motion.div className="w-full h-screen bg-gray-200 overflow-hidden">
-                {/* The inner bar width is controlled by progress */}
-
                 <motion.div
                   className="h-full bg-white"
                   style={{ width: `${progress}%` }}
@@ -59,7 +52,6 @@ export default function Page() {
                   </motion.p>
                 </motion.div>
               </motion.div>
-              {/* Percentage Text */}
             </div>
           </motion.div>
         )}
@@ -82,20 +74,17 @@ export default function Page() {
         </filter>
       </svg>
 
-      {/* Animated Gradient Blobs */}
       <div className="w-96 h-96 rounded-full left-72 animate-blob opacity-80 blur-2xl fixed bg-red-400"></div>
       <div className="w-96 h-96 rounded-full right-72 animation-delay-1 animate-blob opacity-80 blur-2xl fixed bg-blue-400"></div>
       <div className="w-72 h-72 rounded-full opacity-80 animation-delay-2 blur-2xl bottom-40 fixed bg-orange-300 animate-blob"></div>
       <div
         className={loading ? "hidden" : "block"}
+        key={loading? "loading" : "loaded"}
       >
         <Hero />
         <Hook />
         <Services />
         <Process />
-        {/* <World /> */}
-        {/* <Globe /> */}
-        {/* <SearchableFAQ /> */}
         <FAQAccordion />
       </div>
     </>

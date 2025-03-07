@@ -10,45 +10,127 @@ const Hook = () => {
   const content3Ref = useRef(null);
   const content4Ref = useRef(null);
 
+  // useEffect(() => {
+  //   gsap.to(content1Ref.current, {
+  //     scrollTrigger: {
+  //       trigger: content1Ref.current,
+  //       start: "top 60%",
+  //       end: "top 30%",
+  //       scrub: true,
+  //     },
+  //     opacity: 0,
+  //   });
+
+  //   gsap.to(content2Ref.current, {
+  //     scrollTrigger: {
+  //       trigger: content2Ref.current,
+  //       start: "top 60%",
+  //       end: "top 30%",
+  //       scrub: true,
+  //     },
+  //     opacity: 0,
+  //   });
+
+  //   gsap.to(content3Ref.current, {
+  //     scrollTrigger: {
+  //       trigger: content3Ref.current,
+  //       start: "top 60%",
+  //       end: "top 30%",
+  //       scrub: true,
+  //     },
+  //     opacity: 0,
+  //   });
+  //   gsap.to(content4Ref.current, {
+  //     scrollTrigger: {
+  //       trigger: content4Ref.current,
+  //       start: "top 60%",
+  //       end: "top 30%",
+  //       scrub: true,
+  //     },
+  //     opacity: 0,
+  //   });
+  // }, []);
+
+
   useEffect(() => {
-    gsap.to(content1Ref.current, {
-      scrollTrigger: {
-        trigger: content1Ref.current,
-        start: "top 60%",
-        end: "top 30%",
-        scrub: true,
-      },
-      opacity: 0,
-    });
+    // Function to set up ScrollTrigger animations
+    const setupScrollTriggers = () => {
+      gsap.to(content1Ref.current, {
+        scrollTrigger: {
+          trigger: content1Ref.current,
+          start: "top 60%",
+          end: "top 30%",
+          scrub: true,
+        },
+        opacity: 0,
+      });
 
-    gsap.to(content2Ref.current, {
-      scrollTrigger: {
-        trigger: content2Ref.current,
-        start: "top 60%",
-        end: "top 30%",
-        scrub: true,
-      },
-      opacity: 0,
-    });
+      gsap.to(content2Ref.current, {
+        scrollTrigger: {
+          trigger: content2Ref.current,
+          start: "top 60%",
+          end: "top 30%",
+          scrub: true,
+        },
+        opacity: 0,
+      });
 
-    gsap.to(content3Ref.current, {
-      scrollTrigger: {
-        trigger: content3Ref.current,
-        start: "top 60%",
-        end: "top 30%",
-        scrub: true,
-      },
-      opacity: 0,
-    });
-    gsap.to(content4Ref.current, {
-      scrollTrigger: {
-        trigger: content4Ref.current,
-        start: "top 60%",
-        end: "top 30%",
-        scrub: true,
-      },
-      opacity: 0,
-    });
+      gsap.to(content3Ref.current, {
+        scrollTrigger: {
+          trigger: content3Ref.current,
+          start: "top 60%",
+          end: "top 30%",
+          scrub: true,
+        },
+        opacity: 0,
+      });
+
+      gsap.to(content4Ref.current, {
+        scrollTrigger: {
+          trigger: content4Ref.current,
+          start: "top 60%",
+          end: "top 30%",
+          scrub: true,
+        },
+        opacity: 0,
+      });
+
+      // Refresh ScrollTrigger after setting up animations
+      ScrollTrigger.refresh();
+    };
+
+    // Delay the setup to ensure the DOM is fully ready
+    const waitForDOMReady = () => {
+      if (document.readyState === "complete") {
+        setupScrollTriggers();
+      } else {
+        window.addEventListener("load", setupScrollTriggers);
+      }
+    };
+
+    // Start the process
+    waitForDOMReady();
+
+    const triggerResize = () => {
+      window.dispatchEvent(new Event("resize"));
+    };
+
+    // Trigger resize after a short delay to ensure everything is ready
+    const resizeTimeout = setTimeout(() => {
+      triggerResize();
+    }, 100); 
+
+    // Refresh ScrollTrigger on window resize
+    const handleResize = () => ScrollTrigger.refresh();
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => {
+      clearTimeout(resizeTimeout)
+      window.removeEventListener("load", setupScrollTriggers);
+      window.removeEventListener("resize", handleResize);
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   return (
