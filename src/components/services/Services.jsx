@@ -9,10 +9,10 @@ function Services() {
           <h2 className="text-3xl md:text-5xl xxl:text-7xl font-poppins">A creative agency that specializes in </h2>
         </div>
         <Link heading="Creative Direction" />
+        <Link heading="Video Production" />
         <Link heading="Visual Design" />
         <Link heading="Branding" />
         <Link heading="Web Dev" />
-        <Link heading="Video Production" />
         <h1 className="relative mt-6 text-3xl md:text-4xl xxl:text-6xl font-poppins">Caffeine and Creativity comes together so let's meet - <span className="underline"><a href="mailto:contact@onnoff.in">contact@onnoff.in</a></span> </h1>
       </div>
     </section>

@@ -65,7 +65,7 @@ export default function Contact() {
   const textRef = useRef(null)
 
   const handleClick = () => {
-    window.location.href = 'mailto:hello@onnoff.in';
+    window.location.href = 'mailto:contact@onnoff.in';
   }
 
   // Resize text to fit container width
