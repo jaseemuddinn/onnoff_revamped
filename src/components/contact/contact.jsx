@@ -63,11 +63,6 @@ import { useEffect, useRef } from 'react'
 export default function Contact() {
   const containerRef = useRef(null)
   const textRef = useRef(null)
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-
-  const rotateX = useTransform(y, [0, 500], [15, -15])
-  const rotateY = useTransform(x, [0, 500], [-15, 15])
 
   const handleClick = () => {
     window.location.href = 'mailto:hello@onnoff.in';
@@ -106,20 +101,17 @@ export default function Contact() {
 
   return (
     <div
-      className="lg:min-h-screen h-auto my-20 lg:my-0 flex items-center justify-center cursor-pointer"
+      className="lg:min-h-screen h-auto my-20 lg:my-0 flex items-center justify-center "
       ref={containerRef}
-      onMouseMove={(e) => {
-        const rect = containerRef.current.getBoundingClientRect()
-        x.set(e.clientX - rect.left)
-        y.set(e.clientY - rect.top)
-      }}
     >
       <motion.div
-        className="relative text-center w-full"
-        style={{ rotateX, rotateY }}
+        className="relative text-center w-full leading-none"
       >
+        <p className="text-3xl  font-poppins text-black">
+          Click to
+        </p>
         {/* Full-width "Contact Us" text */}
-        <div onClick={handleClick} className="inset-0 flex items-center justify-center">
+        <div onClick={handleClick} className="inset-0 flex items-center justify-center cursor-pointer">
           <span
             ref={textRef}
             className="whitespace-nowrap text-center font-bold uppercase text-black font-montserrat "
@@ -128,24 +120,9 @@ export default function Contact() {
           </span>
         </div>
 
-        {/* Gradient email link */}
-        {/* <motion.a
-          href="mailto:hello@onnoff.com"
-          className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-400 relative inline-block"
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: 'spring', stiffness: 300 }}
-        >
-          hello@onnoff.com
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 blur-2xl"
-            animate={{ opacity: [0, 0.4, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-        </motion.a> */}
-
-        {/* Subtext */}
+        
         <p className="text-xl font-poppins text-black">
-          Drop us a line - we respond faster than light
+          Drop us a line & we respond faster than light
         </p>
       </motion.div>
     </div>

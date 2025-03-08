@@ -108,11 +108,11 @@ export default function Process() {
               {steps.map((step) => (
                 <motion.div
                   key={step.id}
-                  className="timeline-card sticky top-0 flex flex-col items-center justify-center h-screen px-4"
-                  initial={{ opacity: 0, y: 50 }}
+                  className="timeline-card relative top-0 flex flex-col items-center justify-center h-screen px-4"
+                  initial={{ opacity: 1, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  transition={{ duration: 0.8 }}
                 >
                   <div className="bg-white px-10 py-10 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
                     <h2 className="md:text-3xl text-xl font-bold text-gray-900 text-center font-montserrat">
