@@ -33,6 +33,7 @@ export const BoxReveal = ({
           hidden: { opacity: 0, y: 75 },
           visible: { opacity: 1, y: 0 },
         }}
+        className="text-stroke-3 text-transparent"
         initial="hidden"
         animate={mainControls}
         transition={{ duration: duration ? duration : 0.5, delay: 0.25 }}>

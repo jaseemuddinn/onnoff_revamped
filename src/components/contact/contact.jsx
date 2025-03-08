@@ -114,7 +114,7 @@ export default function Contact() {
         <div onClick={handleClick} className="inset-0 flex items-center justify-center cursor-pointer">
           <span
             ref={textRef}
-            className="whitespace-nowrap text-center font-bold uppercase text-black font-montserrat "
+            className="whitespace-nowrap text-center font-bold uppercase text-transparent text-stroke-3 font-montserrat "
           >
             Contact Us
           </span>

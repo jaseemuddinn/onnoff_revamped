@@ -86,7 +86,7 @@ export default function Process() {
           <div className="lg:w-1/2 w-full sticky top-0 h-screen flex items-center justify-center">
             <div className="max-w-full lg:max-w-[90%]">
               <h1 className="text-5xl md:text-8xl font-bold font-montserrat text-black">
-                Professional Foreplay
+                Professional <span className="text-stroke-2 text-transparent"> Foreplay </span>
               </h1>
               <br />
               <p className="font-poppins text-justify">

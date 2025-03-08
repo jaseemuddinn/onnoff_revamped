@@ -55,7 +55,7 @@ const Hook = () => {
   return (
     <div className="relative max-w-7xl mx-auto mb-10 px-4 md:px-4 lg:p-0 h-auto text-black font-poppins">
       <div className="text-4xl md:text-6xl font-montserrat lg:text-7xl font-bold text-black mb-10 lg:mb-20">
-        Let's Cut the crap. You're Here Because…
+        Let's Cut the Crap. You're Here Because…
       </div>
 
       <div ref={content1Ref} className="mt-10 lg:mt-20 text-xl md:text-2xl">
