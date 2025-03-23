@@ -32,7 +32,6 @@ export default function Page() {
     <>
       <AnimatePresence>
         {loading && (
-
           <motion.div
             className="fixed inset-0 z-50 flex flex-col items-center "
             initial={{ opacity: 1 }}
