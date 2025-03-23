@@ -14,8 +14,8 @@ const Hook = () => {
     gsap.to(content1Ref.current, {
       scrollTrigger: {
         trigger: content1Ref.current,
-        start: "top 60%",
-        end: "top 30%",
+        start: "top 20%",
+        end: "top 5%",
         scrub: true,
       },
       opacity: 0,
@@ -24,8 +24,8 @@ const Hook = () => {
     gsap.to(content2Ref.current, {
       scrollTrigger: {
         trigger: content2Ref.current,
-        start: "top 60%",
-        end: "top 30%",
+        start: "top 20%",
+        end: "top 5%",
         scrub: true,
       },
       opacity: 0,
@@ -34,8 +34,8 @@ const Hook = () => {
     gsap.to(content3Ref.current, {
       scrollTrigger: {
         trigger: content3Ref.current,
-        start: "top 60%",
-        end: "top 30%",
+        start: "top 20%",
+        end: "top 5%",
         scrub: true,
       },
       opacity: 0,
@@ -43,8 +43,8 @@ const Hook = () => {
     gsap.to(content4Ref.current, {
       scrollTrigger: {
         trigger: content4Ref.current,
-        start: "top 60%",
-        end: "top 30%",
+        start: "top 20%",
+        end: "top 5%",
         scrub: true,
       },
       opacity: 0,
